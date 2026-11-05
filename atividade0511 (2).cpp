@@ -1,5 +1,3 @@
-// Atividade da aula 05/11 - Algoritmos B
-// Leitura, listagem e pesquisa de telefones
 
 #include <iostream>
 #include <fstream>
@@ -13,7 +11,7 @@ typedef struct {
     string dadosSessao;
 } Telefone;
 
-// Metodo split fornecido na atividade, adaptado para usar strings com seguranca.
+// Metodo split fornecido na atividade adaptado para usar strings com seguranca//
 string *split(string frase, string delimitador = " ") {
     static string vetor[3];
     int inicio = 0;
@@ -31,7 +29,7 @@ string *split(string frase, string delimitador = " ") {
     return vetor;
 }
 
-// Carrega a base de telefonia para um vetor de Telefone.
+// Carrega a base de telefonia para um vetor de telefone//
 vector<Telefone> carregarBase() {
     vector<Telefone> listaSessoes;
     ifstream arquivo("telephony_sessions.txt");
@@ -58,7 +56,7 @@ vector<Telefone> carregarBase() {
     return listaSessoes;
 }
 
-// Lista os celulares e mostra a quantidade.
+// Lista os celulares e mostra a quantidade.//
 void listarTelefones(vector<Telefone> listaSessoes) {
     cout << "\nLISTA DE TELEFONES\n";
     int quantidade = listaSessoes.size();
@@ -68,7 +66,7 @@ void listarTelefones(vector<Telefone> listaSessoes) {
     cout << "Quantidade: " << listaSessoes.size() << "\n";
 }
 
-// Pesquisa o telefone e apresenta os dados da sessao.
+// Pesquisa o telefone e apresenta os dados da sessao//
 void pesquisarTelefone(vector<Telefone> listaSessoes) {
     string numero;
     bool encontrou = false;
